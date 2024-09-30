@@ -8,7 +8,6 @@ metadata:
     project: expense
     tier: db   
 spec:
-  type: ClusterIP 
   selector:
     name: mysql
     project: expense
@@ -42,7 +41,7 @@ spec:
       tier: db
   template:
     metadata:
-      name: mysql-dev
+      name: mysql
       labels:
         name: mysql
         project: expense
