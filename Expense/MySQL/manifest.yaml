@@ -17,10 +17,6 @@ spec:
       port: 3306 #serviceport
       targetPort: 3306
 
-    
-    
-
-
 ---
 
 apiVersion: apps/v1

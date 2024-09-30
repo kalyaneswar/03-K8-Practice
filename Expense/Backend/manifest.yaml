@@ -8,6 +8,7 @@ data:
 
 ---
 
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -52,6 +53,7 @@ spec:
   ports:
   - protocol: TCP
     port: 8080 #service-port
+    targetPort: 8080 # Target port
 
 ---
 
