@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: kalyaneswarm/backend:v1.0
+          image: joindevops/backend:v1.0
           envFrom:
             - configMapRef:
                 name: backend
