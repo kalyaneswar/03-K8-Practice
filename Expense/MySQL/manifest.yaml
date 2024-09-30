@@ -48,7 +48,7 @@ spec:
         tier: db
     spec:
       containers:
-        - name: mysql-db
+        - name: mysql
           image: kalyaneswarm/mysql:v1.0
               
         
