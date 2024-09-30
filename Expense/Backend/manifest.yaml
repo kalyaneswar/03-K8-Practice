@@ -3,6 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: expense-backend
+  namespace: expense
   labels:
     name: backend
     project: expense
