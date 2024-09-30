@@ -14,7 +14,8 @@ spec:
     project: expense
     tier: db 
   ports:
-    - port: 3306 #serviceport
+    - protocol: TCP
+      port: 3306 #serviceport
       targetPort: 3306
 
     
