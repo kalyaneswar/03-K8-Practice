@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
         - name: mysql-db
-          image: kalyaneswarm/mysql
+          image: kalyaneswarm/mysql:v1.0
           ports:
             - containerPort: 3306
               
