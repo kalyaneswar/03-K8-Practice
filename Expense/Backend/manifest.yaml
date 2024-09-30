@@ -62,6 +62,9 @@ spec:
           image: kalyaneswarm/backend:v1.0
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: backend
               
         
 
