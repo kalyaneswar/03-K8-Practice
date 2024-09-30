@@ -12,11 +12,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend-service
-  namespace: expense
-  labels:
-    name: backend
-    project: expense
-    tier: backend   
+  namespace: expense   
 spec:
   type: ClusterIP 
   selector:
@@ -26,10 +22,6 @@ spec:
   ports:
     - port: 8080 #serviceport
       targetPort: 8080
-
-    
-    
-
 
 ---
 
@@ -58,10 +50,8 @@ spec:
         tier: backend
     spec:
       containers:
-        - name: backend-db
+        - name: backend
           image: kalyaneswarm/backend:v1.0
-          ports:
-            - containerPort: 8080
           envFrom:
             - configMapRef:
                 name: backend
