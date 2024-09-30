@@ -124,8 +124,6 @@ spec:
           # envFrom:
           #   - configMapRef:
           #       name: frontend
-          ports:
-            - containerPort: 80
           volumeMounts:
             - mountPath: /etc/nginx/nginx.conf
               name: nginx-conf
