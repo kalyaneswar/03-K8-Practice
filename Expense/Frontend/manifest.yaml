@@ -121,9 +121,6 @@ spec:
       containers:
         - name: frontend
           image: kalyaneswarm/frontend:v1.0
-          # envFrom:
-          #   - configMapRef:
-          #       name: frontend
           volumeMounts:
             - mountPath: /etc/nginx/nginx.conf
               name: nginx-conf
@@ -132,7 +129,7 @@ spec:
       volumes:
         - name: nginx-conf
           configMap:
-            name: nginx-conf
+            name: frontend
             items:
               - key: nginx.conf
                 path: nginx.conf
