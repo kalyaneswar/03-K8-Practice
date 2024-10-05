@@ -25,7 +25,6 @@ kind: Service
 metadata:
   name: kalyan-service
 spec:
-  type: clusterIP
   selector:
     app: kalyan-app
     use: world
