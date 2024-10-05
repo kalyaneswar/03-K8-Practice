@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kalyan-metadata
+  name: kalyan-configmap
 data:
   git_url: https://github.com/kalyaneswar/03-K8-Practice.git
   facebook_profile: kalyanprice.facebook.com
