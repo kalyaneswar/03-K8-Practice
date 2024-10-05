@@ -18,7 +18,7 @@ data:
   password: "YWRtaW4xMjMK"
 
 ---
-Service |
+# Service |
 
 apiVersion: v1
 kind: Service
