@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: Kalyan-metadataName
+  name: Kalyan_metadataName
   labels:
-    App: MyApp
+    App: My-own-App
   
