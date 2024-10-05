@@ -1,3 +1,4 @@
+# ConfigMap
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -5,8 +6,19 @@ metadata:
 data:
   git_url: https://github.com/kalyaneswar/03-K8-Practice.git
   facebook_profile: kalyanprice.facebook.com
+#
+---
+# Secret
+apiVersion: v1
+kind: Secret
+metadata:
+  name: kalyan-secret
+data:
+  username: "YWRtaW4K"
+  password: "YWRtaW4xMjMK"
 
 ---
+# Pod
 apiVersion: v1
 kind: Pod
 metadata:
@@ -34,4 +46,6 @@ spec:
       envFrom:
         - configMapRef:
             name: kalyan-configmap
+        - secretRef:
+            name: kalyan-secret
   
