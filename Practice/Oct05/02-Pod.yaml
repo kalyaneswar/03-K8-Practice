@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kalyan-pod-name
+  labels:
+    app: kalyan-app
+    use: world
+spec:
+  containers:
+    - name: nginx-service
+      image: ngiinx
+  
