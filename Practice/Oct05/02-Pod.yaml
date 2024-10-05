@@ -65,4 +65,7 @@ spec:
             name: kalyan-configmap
         - secretRef:
             name: kalyan-secret
+    - name: alma
+      image: "almalinux:9"
+      command: ["sleep","2000"]
   
