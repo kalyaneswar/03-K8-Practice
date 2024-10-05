@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: kalyan-pod-name
+  name: kalyan-nginx-pod
   namespace: kalyan
   labels:
     app: kalyan-app
