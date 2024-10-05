@@ -31,5 +31,7 @@ spec:
           value: Kalyan
         - name: QUEEN
           value: Sam
-    
+      envFrom:
+        - configMapRef:
+            name: kalyan-configmap
   
