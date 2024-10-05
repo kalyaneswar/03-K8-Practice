@@ -1,4 +1,13 @@
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kalyan-metadata
+data:
+  git_url: https://github.com/kalyaneswar/03-K8-Practice.git
+  facebook_profile: kalyanprice.facebook.com
+
+---
+apiVersion: v1
 kind: Pod
 metadata:
   name: kalyan-nginx-pod
