@@ -18,6 +18,24 @@ data:
   password: "YWRtaW4xMjMK"
 
 ---
+# Service |
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kalyan-service
+spec:
+  type: clusterIP
+  selector:
+    app: kalyan-app
+    use: world
+  ports:
+    - port: 80
+      targetPort: 80
+    
+
+
+---
 # Pod
 apiVersion: v1
 kind: Pod
