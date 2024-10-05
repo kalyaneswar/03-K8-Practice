@@ -20,7 +20,7 @@ data:
   password: "YWRtaW4xMjMK"
 
 ---
-# Service |
+# Service 
 
 apiVersion: v1
 kind: Service
@@ -28,12 +28,14 @@ metadata:
   name: kalyan-service
   namespace: kalyan
 spec:
+  type: NodePort
   selector:
     app: kalyan-app
     use: world
   ports:
     - port: 80
       targetPort: 80
+      nodePort: 30008
     
 
 
