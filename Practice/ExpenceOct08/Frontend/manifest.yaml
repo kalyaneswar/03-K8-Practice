@@ -136,6 +136,7 @@ spec:
     spec:
       containers:
         - name: frontend
+          image: kalyaneswarm/frontend:v1.0
           volumeMounts:
             - mountPath: /etc/nginx/nginx.conf
               name: nginx-conf
