@@ -11,7 +11,7 @@ data:
 apiVersion: v1
 kind: Service
 metadata:
-  name: expense-svc
+  name: expense-backend-svc
   namespace: expense
 spec:
   selector:
