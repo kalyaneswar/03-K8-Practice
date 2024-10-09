@@ -15,7 +15,7 @@ spec:
     project: expense
     environment: dev
     tier: mysql
-  clusterIP: None # Head less
+  # clusterIP: None # Head less
   
 
 ---
