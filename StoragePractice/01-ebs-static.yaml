@@ -28,4 +28,18 @@ spec:
       storage: 5Gi
 
 ---
-
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+spec:
+  containers:
+  - name: app
+    image: nginx    
+    volumeMounts:
+    - name: persistent-storage
+      mountPath: /usr/share/nginx/
+  volumes:
+  - name: persistent-storage
+    persistentVolumeClaim:
+      claimName: ebs-claim
