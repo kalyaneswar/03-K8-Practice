@@ -34,12 +34,14 @@ metadata:
   name: app
 spec:
   containers:
-  - name: app
-    image: nginx    
-    volumeMounts:
-    - name: persistent-storage
-      mountPath: /usr/share/nginx/
+    - name: app
+      image: nginx    
+      volumeMounts:
+      - name: persistent-storage
+        mountPath: /usr/share/nginx/
+  nodeSelector:
+    topology.kubernetes.io/zone: us-east-1b
   volumes:
-  - name: persistent-storage
-    persistentVolumeClaim:
-      claimName: ebs-claim
+    - name: persistent-storage
+      persistentVolumeClaim:
+        claimName: ebs-claim
