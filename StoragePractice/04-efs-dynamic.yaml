@@ -24,3 +24,18 @@ spec:
       storage: 2Gi
 
 ---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: efs-app-dynamic
+spec:
+  containers:
+    - name: app
+      image: nginx
+      volumeMounts:
+        - name: persistent-storage
+          mountPath: /usr/share/nginx/
+  volumes:
+    - name: persistent-storage
+      persistentVolumeClaim:
+        claimName: efs-claim-dynamic
