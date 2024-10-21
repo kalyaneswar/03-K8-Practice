@@ -16,3 +16,15 @@ spec:
 
 ---
 
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-claim-static
+spec:
+  accessModes:
+    - ReadWriteOnce
+  # storageClassName: efs-sc
+  volumeName: efs-pv-static
+  resources:
+    requests:
+      storage: 2Gi
