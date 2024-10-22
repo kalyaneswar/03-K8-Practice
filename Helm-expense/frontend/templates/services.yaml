@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: expense   
+spec:
+  type: LoadBalancer
+  selector:
+    name: frontend
+    project: expense
+    tier: web 
+  ports:
+  - protocol: TCP
+    port: {{ .Values.service.serviceport}} #service-port
+    targetPort: {{ .Values.service.targetport }} # Target port

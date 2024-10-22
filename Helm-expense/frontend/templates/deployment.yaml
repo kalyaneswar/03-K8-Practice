@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: expense
+  labels:
+    name: frontend
+    project: expense
+    tier: web
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      name: frontend
+      project: expense
+      tier: web
+  template:
+    metadata:
+      labels:
+        name: frontend
+        project: expense
+        tier: web
+    spec:
+      containers:
+        - name: frontend
+          image: kalyaneswarm/frontend:{{ .Values.deployment.imageVersion }}
+          volumeMounts:
+            - mountPath: /etc/nginx/nginx.conf
+              name: nginx-conf
+              subPath: nginx.conf
+              readOnly: true
+      volumes:
+        - name: nginx-conf
+          configMap:
+            name: frontend
+            items:
+              - key: nginx.conf
+                path: nginx.conf
