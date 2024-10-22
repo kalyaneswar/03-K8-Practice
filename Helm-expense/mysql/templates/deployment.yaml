@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: expense
+
+  labels:
+    name: mysql
+    project: expense
+    tier: db
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      name: mysql
+      project: expense
+      tier: db
+
+  template:
+    metadata:
+      labels:
+        name: mysql
+        project: expense
+        tier: db
+
+    spec:
+      containers:
+        - name: mysql
+          image: kalyaneswarm/mysql:{{ .Values.deployment.imageVersion }}

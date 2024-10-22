@@ -1,0 +1,4 @@
+apiVersion: v1
+name: expense-mysql
+version: 0.0.1
+description: This is for expense mysql project

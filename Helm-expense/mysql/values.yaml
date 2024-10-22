@@ -1,0 +1,6 @@
+deployment:
+  replicas: 1
+  imageVersion: v1.0
+service:
+  targetport: 3306
+  serviceport: 3306
