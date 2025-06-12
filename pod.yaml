@@ -18,11 +18,11 @@ spec:
       image: nginx
       ports:
         - containerPort: 80
-      env:
-        - name: k8
-          value: kubenetes
-        - name: owner
-          value: kalyaN
+      # env:
+      #   - name: k8
+      #     value: kubenetes
+      #   - name: owner
+      #     value: kalyaN
       resources:
         requests:
           memory: "64Mi"
@@ -30,3 +30,16 @@ spec:
         limits:
           memory: "128Mi"
           cpu: "500m"
+      env:
+        # Define the environment variable
+        - name: PLAYER_INITIAL_LIVES # Notice that the case is different here
+                                     # from the key name in the ConfigMap.
+          valueFrom:
+            configMapKeyRef:
+              name: game-demo           # The ConfigMap this value comes from.
+              key: player_initial_lives # The key to fetch.
+        - name: UI_PROPERTIES_FILE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: game-demo
+              key: ui_properties_file_name
