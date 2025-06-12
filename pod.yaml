@@ -2,6 +2,12 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: tomcat
+  labels:
+    name: abc
+    project : testtt
+  annotations:
+    github: https://github.com/kalyaneswar/03-K8-Practice
+    
 spec:
   containers:
     - name: tomcat
