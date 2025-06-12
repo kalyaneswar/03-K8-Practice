@@ -7,14 +7,19 @@ metadata:
     project : testtt
   annotations:
     github: https://github.com/kalyaneswar/03-K8-Practice
-    
+
 spec:
   containers:
-    - name: tomcat
-      image: tomcat
-      ports:
-      - containerPort: 8080
+    # - name: tomcat
+    #   image: tomcat
+    #   ports:
+    #   - containerPort: 8080
     - name: nginx
       image: nginx
       ports:
         - containerPort: 80
+      env:
+        - name: k8
+          value: kubenetes
+        - name: owner
+          value: kalyaN
