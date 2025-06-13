@@ -42,8 +42,10 @@ spec:
         - name: DB_HOST
           valueFrom:
             secretKeyRef:
+              name: demo-secrets
               key: DB_HOST
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
               key: DB_PASSWORD
+              name: demo-secrets
