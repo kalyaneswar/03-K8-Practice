@@ -18,11 +18,7 @@ spec:
       image: nginx
       ports:
         - containerPort: 80
-      # env:
-      #   - name: k8
-      #     value: kubenetes
-      #   - name: owner
-      #     value: kalyaN
+
       resources:
         requests:
           memory: "64Mi"
@@ -36,10 +32,10 @@ spec:
                                      # from the key name in the ConfigMap.
           valueFrom:
             configMapKeyRef:
-              name: game-demo           # The ConfigMap this value comes from.
+              name: demo-config           # The ConfigMap this value comes from.
               key: player_initial_lives # The key to fetch.
         - name: UI_PROPERTIES_FILE_NAME
           valueFrom:
             configMapKeyRef:
-              name: game-demo
+              name: demo-config
               key: ui_properties_file_name
