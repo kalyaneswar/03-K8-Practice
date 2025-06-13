@@ -39,3 +39,11 @@ spec:
             configMapKeyRef:
               name: demo-config
               key: ui_properties_file_name
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              key: DB_HOST
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: DB_PASSWORD
